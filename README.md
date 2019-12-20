@@ -1,3 +1,3 @@
 Some personal API projects
 
-Enjoi =)
+Enjoy =)
