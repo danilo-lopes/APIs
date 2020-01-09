@@ -1,11 +1,8 @@
-from controller import *
 import json
 import requests
 
 
-def printUserPlaylists():
-
-    token = getUserToken()
+def printUserPlaylists(token):
 
     headers = {"Authorization": "Bearer {}".format(token)}
 

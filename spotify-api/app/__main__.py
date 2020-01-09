@@ -1,4 +1,5 @@
 from list_user_playlist import printUserPlaylists
+from controller import getUserToken, renewToken, haveControllerAcess
 
 
 def menu():
@@ -13,7 +14,16 @@ while True:
     choice = input("Enter option [1-5]: ")
 
     if choice == "1":
-        printUserPlaylists()
+        token = getUserToken()
+
+        haveAccess = haveControllerAcess(token)
+
+        if haveAccess == 'Unauthorized':
+            token = renewToken(token)
+            printUserPlaylists(token)
+        
+        else:
+            printUserPlaylists(token)
 
     elif choice == "0":
         exit()
