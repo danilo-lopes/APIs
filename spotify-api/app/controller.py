@@ -3,8 +3,8 @@ import requests
 
 
 def getUserToken():
-    userID = '207b8e9fb0de47d180ea75049ab7b134'
-    userSecret = '9135635ed042414587609c86fa4e88a6'
+    userID = ''
+    userSecret = ''
 
     grantType = 'client_credentials'
 
@@ -19,8 +19,8 @@ def getUserToken():
     return tokenRaw['access_token']
 
 def renewToken(token):
-    userID = '207b8e9fb0de47d180ea75049ab7b134'
-    userSecret = '9135635ed042414587609c86fa4e88a6'
+    userID = ''
+    userSecret = ''
 
     grantType = 'client_credentials'
 
